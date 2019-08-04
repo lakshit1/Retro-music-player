@@ -34,12 +34,12 @@ class WidthFitSquareCardView : MaterialCardView {
         requestLayout()
     }
 
-    override fun onMeasure(i: Int, i2: Int) {
-        var i2 = i2
+    override fun onMeasure(i: Int, width: Int) {
+        var widthFinal = width
         if (this.forceSquare) {
-            i2 = i
+            widthFinal = i
         }
-        super.onMeasure(i, i2)
+        super.onMeasure(i, widthFinal)
     }
 
     private var forceSquare = true

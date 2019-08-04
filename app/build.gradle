@@ -4,17 +4,17 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-kapt'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         minSdkVersion 21
-        targetSdkVersion 28
+        targetSdkVersion 29
 
         renderscriptTargetApi 28 //must match target sdk and build tools
         vectorDrawables.useSupportLibrary = true
 
         applicationId "code.name.monkey.retromusic"
-        versionCode 348
-        versionName '3.3.000'
+        versionCode 351
+        versionName '3.3.110'
 
         multiDexEnabled true
 
@@ -131,8 +131,10 @@ dependencies {
     implementation('com.h6ah4i.android.widget.advrecyclerview:advrecyclerview:0.11.0@aar') {
         transitive = true
     }
-    
-    /*UI Library*/
+
+    implementation 'com.google.dagger:dagger:2.23.1'
+    kapt 'com.google.dagger:dagger-compiler:2.23.1'
+
     implementation 'me.zhanghai.android.materialprogressbar:library:1.6.1'
 
 
